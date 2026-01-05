@@ -11,7 +11,7 @@ body {
 }
 
 #wrapper {
-    width: 300px;
+    width: min(300px, 92vw);
     padding: 10px;
     background-color: #fff;
     border-radius: 10px;
@@ -19,7 +19,15 @@ body {
 }
 
 #wrapper p {
-    font-size: 2rem;
+    font-size: clamp(1.6rem, 4vw, 2rem);
+}
+
+#button-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
 }
 
 input[type="button"] {
@@ -27,12 +35,26 @@ input[type="button"] {
     background-color: #cb0162;
     color: #fff;
     border-radius: 3px;
-    padding: 2px;
-    font-size: 1.5rem;
-    width: 60px;
-    height: 40px;
+
+    width: auto;
+    min-width: 60px;
+
+    height: auto;
+    min-height: 40px;
+
+    padding: 6px 10px;
+    font-size: clamp(1rem, 3.5vw, 1.5rem);
+    line-height: 1.1;
+    white-space: nowrap;
 }
 
 input[type="button"]:hover {
     box-shadow: 0px 0px 5px #062e03;
+}
+
+#step {
+    width: min(220px, 80%);
+    margin: 10px auto 0;
+    display: block;
+    padding: 6px;
 }
