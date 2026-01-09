@@ -16,6 +16,8 @@
         <ul id="todo-list"></ul>
         <div id="new-task-input">
             <input id="new-task-text" type="text" placeholder="Todo task" />
+            <input id="new-task-date" type="date" />
+            <select id="new-task-category"></select>
             <input
                 id="new-task-button"
                 type="button"
@@ -23,6 +25,20 @@
                 onclick="addTask()"
             />
         </div>
+
+        <div id="new-task-input">
+            <input
+                id="new-category-text"
+                type="text"
+                placeholder="New category"
+            />
+            <input
+                type="button"
+                value="Add Category"
+                onclick="addCategory()"
+            />
+        </div>
+
         <script src="script.js"></script>
     </body>
 </html>
